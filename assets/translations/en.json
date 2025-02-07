@@ -1,0 +1,21 @@
+{
+  "bmiCalculate": "BMI Calculate",
+  "maleGender": "Male",
+  "femaleGender": "Female",
+  "height": "Height",
+  "width": "width",
+  "age": "Age",
+  "calculate": "Calculate",
+  "cm": "cm",
+  "underweight": "Underweight",
+  "normal": "Normal",
+  "overweight": "Overweight",
+  "obese": "Obese",
+  "underweightMessage": "You are underweight, try to gain some weight!",
+  "normalMessage": "Your weight is ideal, keep maintaining it!",
+  "overweightMessage": "You are slightly overweight, try improving your lifestyle!",
+  "obeseMessage": "You are obese, you need a healthy diet and exercise!",
+  "yourBMI": "Your BMI",
+  "recalculate": "Re - Calculate",
+  "yourResult": "Your result"
+}

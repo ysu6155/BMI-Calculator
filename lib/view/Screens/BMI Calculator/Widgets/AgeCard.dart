@@ -1,16 +1,16 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:untitled/view_model/translations/locale_keys.g.dart';
+import 'package:untitled/view_model/utils/AppColor.dart';
 
-import '../../../../view_model/utils/AppColor.dart';
 
-class WeightAgeCard extends StatelessWidget {
-  final String label;
+class AgeCard extends StatelessWidget {
   final num value;  // تعديل النوع إلى double لتمكين الكسور العشرية
   final void Function() onIncrement;
   final void Function() onDecrement;
 
-  const WeightAgeCard({
-    required this.label,
+  const AgeCard({
     required this.value,
     required this.onIncrement,
     required this.onDecrement,
@@ -22,7 +22,7 @@ class WeightAgeCard extends StatelessWidget {
     return Container(
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(12.r),
-        color: AppColor.backGroundColorCardLight,
+        color: AppColor.backGroundColorGray,
       ),
       padding: EdgeInsets.all(16.sp),
       height: 180.sp,
@@ -30,14 +30,14 @@ class WeightAgeCard extends StatelessWidget {
         spacing: 10.sp,
         children: [
           Text(
-            label,
+            LocaleKeys.age.tr(),
             style: TextStyle(
               color: AppColor.textColor,
               fontSize: 20.sp,
             ),
           ),
           Text(
-            "${value.toStringAsFixed(1)}",  // عرض مع خانة عشرية واحدة
+            value.toStringAsFixed(0),  // عرض مع خانة عشرية واحدة
             style: TextStyle(
                 color: AppColor.white,
                 fontSize: 40.sp,

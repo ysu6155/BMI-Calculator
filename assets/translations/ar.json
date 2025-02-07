@@ -1,0 +1,21 @@
+{
+  "bmiCalculate": "حساب مؤشر الكتلة",
+  "maleGender": "ذكر",
+  "femaleGender": "أنثى",
+  "height": "الطول",
+  "width": "الوزن",
+  "age": "العمر",
+  "calculate": "احسب",
+  "cm": "سم",
+  "underweight": "نقص في الوزن",
+  "normal": "وزن طبيعي",
+  "overweight": "زيادة في الوزن",
+  "obese": "سمنة",
+  "underweightMessage": "وزنك أقل من الطبيعي، حاول زيادة وزنك!",
+  "normalMessage": "وزنك مثالي، حافظ عليه!",
+  "overweightMessage": "وزنك زائد قليلاً، حاول تحسين نمط حياتك!",
+  "obeseMessage": "أنت تعاني من السمنة، تحتاج إلى نظام غذائي صحي وتمارين!",
+  "yourBMI": "مؤشر كتلة جسمك",
+  "recalculate": "إعادة الحساب",
+  "yourResult": "نتيجتك"
+}

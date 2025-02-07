@@ -1,9 +1,8 @@
-import 'dart:ui';
-
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
-import '../../../view_model/utils/AppColor.dart';
+import 'package:untitled/view_model/translations/locale_keys.g.dart';
+import 'package:untitled/view_model/utils/AppColor.dart';
 
 class YourResultPage extends StatelessWidget {
   final String result;
@@ -17,28 +16,30 @@ class YourResultPage extends StatelessWidget {
     required this.resultMessage,
   });
 
+
   Color _getBmiCategoryColor(String category) {
-    switch (category) {
-      case 'Underweight':
-        return AppColor.underweight;
-      case 'Normal':
-        return AppColor.normal;
-      case 'Overweight':
-        return AppColor.overweight;
-      case 'Obese':
-        return AppColor.obesity;
-      default:
-        return AppColor.textColor;
+    if (category == LocaleKeys.underweight.tr()) {
+      return AppColor.underweight;
+    } else if (category ==  LocaleKeys.normal.tr()) {
+      return AppColor.normal;
+    } else if (category == LocaleKeys.overweight.tr()) {
+      return AppColor.overweight;
+    } else if (category == LocaleKeys.obese.tr()) {
+      return AppColor.obesity;
+    } else {
+      return AppColor.textColor;
     }
   }
+
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: AppColor.backGroundColor,
       appBar: AppBar(
+        iconTheme: IconThemeData(color: AppColor.white),
         title: Text(
-          'Your Result',
+          LocaleKeys.yourResult.tr(),
           style: TextStyle(
             color: AppColor.white,
             fontSize: 20.sp,
@@ -63,7 +64,7 @@ class YourResultPage extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
                     Text(
-                      "Your BMI",
+                      LocaleKeys.yourBMI.tr(),
                       style: TextStyle(
                         fontSize: 24.sp,
                         fontWeight: FontWeight.bold,
@@ -116,7 +117,7 @@ class YourResultPage extends StatelessWidget {
               ),
               child: Center(
                 child: Text(
-                  "Re - Calculate",
+                  LocaleKeys.recalculate.tr(),
                   style: TextStyle(fontSize: 20.sp, color: AppColor.white, fontWeight: FontWeight.bold),
                 ),
               ),
